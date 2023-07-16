@@ -1,0 +1,10 @@
+@mixin lg($direction,$colors...){
+    background-image: linear-gradient($direction,$colors);
+}
+
+@mixin backgroundClip{
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
