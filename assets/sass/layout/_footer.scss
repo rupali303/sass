@@ -45,4 +45,11 @@
         
 
     }
+
+    @include response(phone){
+        .col-6{
+            flex: 0 0 100%;
+            margin-bottom: 2rem;
+        }
+    }
 }

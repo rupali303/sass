@@ -1,7 +1,7 @@
 let cl = console.log;
 
 const navigation = document.getElementById("navigation");
-const navToggle = document.getElementById("navToggle");
+const naviToggle = document.getElementById("naviToggle");
 
 
 
@@ -10,6 +10,6 @@ const navToggle = document.getElementById("navToggle");
 
 
 
-navToggle.addEventListener("click", ()=>{
+naviToggle.addEventListener("click", ()=>{
     navigation.classList.toggle('active')
 })

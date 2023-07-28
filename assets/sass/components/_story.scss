@@ -19,6 +19,7 @@
         clip-path: circle(50% at 50% 50%);
         shape-outside:circle(50% at 50% 50%) ;
         margin-right: 4rem;
+        outline: none;
 
         img{
             width: 100%;
@@ -51,6 +52,13 @@
     &:hover img{
         transform: scale(1);
         filter: blur(3px) brightness(.8);
+    }
+
+    @include response(phone){
+        transform: skewX(0deg);
+        & > *{
+            transform: skewX(0deg);
+        }
     }
     
 }

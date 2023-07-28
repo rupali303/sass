@@ -29,6 +29,7 @@
             background:$color-gray-dark1;
             position: absolute;
             left: 0;
+            transition: all .3s ease-in-out;
             
         }
         &::after{
@@ -38,6 +39,7 @@
             background:$color-gray-dark1;
             position: absolute;
             left: 0;
+            transition: all .3s ease-in-out;
             
         }
         &::before{
@@ -61,9 +63,61 @@
         z-index: 80;
         transition: transform .7s ease-in-out;
     }
+    &-nav{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        opacity: 0;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        z-index: 80;
+        transition: all .6s;
+        @include atCenter;
+    }
+&-item{
+    margin: 1rem;
+}
+&-link{
+    &:link, &:visited{
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 400;
+        padding: 1rem 2rem;
+        transition: all .4s;
+        color: $color-white;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+        background-size: 225%;
+        transition: all .4s ease-in-out;
+    }
+    &:hover, &:focus{
+        background-position: 100%;
+        color: $color-primary-dark;
+        font-weight: 700;
+    }
+}
+
     &.active{
         .navigation-background{
-            transform: scale(50);
+            transform: scale(60);
+        }
+        .navigation-icon{
+            background-color: transparent;
+
+            &::before{
+                top: 0;
+                transform: rotate(135deg);
+            }
+            &::after{
+                top: 0;
+                transform: rotate(-135deg);
+            }
+        }
+        .navigation-nav{
+            left: 0;
+            opacity: 1;
+            animation: moveInleft .6s ease-in-out ;
         }
     }
 }

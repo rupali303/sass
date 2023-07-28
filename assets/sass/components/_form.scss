@@ -74,4 +74,10 @@ opacity: 0;
     &-radio-control:checked ~ &-radio-label > &-radio-btn::after {
         opacity: 1;
     }
+    &-radio-group{
+        @include response(phone){
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+    }
 }
